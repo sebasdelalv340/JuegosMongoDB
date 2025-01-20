@@ -151,14 +151,8 @@ class GestorMongo() {
 
             val juegoActualizado = Juego(titulo, genero, precio, fecha_lanzamiento)
 
-            val juegoDoc = Document()
-                .append("titulo", juegoActualizado.titulo)
-                .append("genero", juegoActualizado.genero)
-                .append("precio", juegoActualizado.precio)
-                .append("fecha_lanzamiento", juegoActualizado.fecha_lanzamiento.toString())
-
             val filtroPorTitulo = Filters.eq("titulo", tittle)
-            val updateGame = collection.updateOne(filtroPorTitulo, Document("\$set", juegoDoc))
+            val updateGame = collection.replaceOne(filtroPorTitulo, juegoActualizado)
             println("Juego actualizado: $updateGame.")
         } catch (e: Exception) {
             e.printStackTrace()
