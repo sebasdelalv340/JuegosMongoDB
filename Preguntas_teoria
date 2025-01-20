@@ -1,0 +1,33 @@
+a) ¿Qué ventajas e inconvenientes encuentras al usar una base de datos documental con MongoDB?
+
+Ventajas:
+
+Flexibilidad: Permite almacenar documentos con diferentes estructuras en la misma colección, lo que facilita la adaptación.
+
+Escalabilidad: Puede manejar grandes volúmenes de datos.
+
+Alta velocidad de escritura: Es eficiente para escribir datos, lo cual es útil en aplicaciones con grandes flujos de datos.
+
+Inconvenientes:
+
+Inconsistencia: La flexibilidad del esquema puede llevar a inconsistencias si no se gestionan adecuadamente, dificultando el mantenimiento.
+
+Duplicidad de datos: La misma flexibilidad puede provocar datos duplicados.
+
+Consumo de almacenamiento: Puede consumir más espacio de almacenamiento debido a la duplicación de datos.
+
+b) ¿Cuáles han sido los principales problemas que has tenido al desarrollar la aplicación?
+
+Uno de los problemas al usar clases personalizadas (como Juego) es la necesidad de dependencias específicas.
+
+Validación de datos: Garantizar que los datos de entrada sigan un formato específico, especialmente con fechas en esta caso (aunque en mongo tengo el tipo de dato Date y en el código LocalDate sin problemas) y otros tipos de datos, puede ser complicado.
+
+Inconsistencia de datos: Dado que MongoDB no impone un esquema fijo, asegurar la consistencia de los datos almacenados puede requerir validaciones y controles adicionales en el código.
+
+Gestión de excepciones: Manejar adecuadamente las excepciones y errores que pueden surgir durante las operaciones de base de datos es importante para mantener la estabilidad de la aplicación.
+
+c) ¿Cómo solucionarías el problema de la inconsistencia de datos en una base de datos documental?
+
+Implementar validaciones en una capa de la aplicación para asegurarte de que los datos cumplen con los requisitos antes de insertarlos o actualizarlos en la base de datos.
+
+Mantener una documentación clara y actualizada sobre la estructura esperada de los documentos en la colección puede ayudar a los desarrolladores a seguir un formato uniforme.

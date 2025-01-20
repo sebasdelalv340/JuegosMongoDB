@@ -2,8 +2,7 @@ package org.example
 
 import java.time.LocalDate
 
-
-class Juego(
+data class Juego(
     val titulo: String,
     val genero: String,
     val precio: Double,

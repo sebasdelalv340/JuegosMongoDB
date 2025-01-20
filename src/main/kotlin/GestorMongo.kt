@@ -163,8 +163,5 @@ class GestorMongo() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
-
-
     }
 }
